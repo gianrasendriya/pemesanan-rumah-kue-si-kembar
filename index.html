@@ -37,11 +37,22 @@ html{
 body{
     background: url("./assets/images/background.png") center/cover no-repeat fixed;
     position: relative;
+    color: var(--dark);
+    overflow-x: hidden;
 }
 
-body{
-    background: url("./assets/images/background.png") center/cover no-repeat fixed;
+body::before{
+    content:"";
+    position: fixed;
+    inset: 0;
+    background: rgba(255,247,238,0.25);
+    pointer-events: none;
+    z-index: 0;
+}
+
+body > *{
     position: relative;
+    z-index: 1;
 }
 
 img{
