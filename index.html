@@ -35,14 +35,16 @@ html{
 }
 
 body{
-    background:
-        linear-gradient(
-            rgba(255,247,238,0.88),
-            rgba(255,247,238,0.88)
-        ),
-        url("./assets/images/background.png") center/cover no-repeat fixed;
+    background: url("./assets/images/background.png") center/cover no-repeat fixed;
+    position: relative;
+}
 
-    color: var(--dark);
+body::before{
+    content:"";
+    position: fixed;
+    inset: 0;
+    background: rgba(255,247,238,0.45);
+    pointer-events: none;
 }
 
 img{
